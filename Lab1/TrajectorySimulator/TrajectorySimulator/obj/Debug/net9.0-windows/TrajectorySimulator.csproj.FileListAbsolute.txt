@@ -1,0 +1,17 @@
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\bin\Debug\net9.0-windows\TrajectorySimulator.exe
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\bin\Debug\net9.0-windows\TrajectorySimulator.deps.json
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\bin\Debug\net9.0-windows\TrajectorySimulator.runtimeconfig.json
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\bin\Debug\net9.0-windows\TrajectorySimulator.dll
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\bin\Debug\net9.0-windows\TrajectorySimulator.pdb
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.csproj.GenerateResource.cache
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.AssemblyInfoInputs.cache
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.AssemblyInfo.cs
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.csproj.CoreCompileInputs.cache
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.dll
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\refint\TrajectorySimulator.dll
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.pdb
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.genruntimeconfig.cache
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\ref\TrajectorySimulator.dll
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.Properties.Resources.resources
+C:\Users\Dima\source\repos\TrajectorySimulator\TrajectorySimulator\obj\Debug\net9.0-windows\TrajectorySimulator.EnteringDataForm.resources
