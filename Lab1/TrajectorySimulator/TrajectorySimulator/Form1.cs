@@ -1,11 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace TrajectorySimulator 
+
 {
+
     public partial class EnteringDataForm : Form
     {
+        [DllImport("kernel32.dll")]
+        static extern bool AllocConsole();
+
         private const double TimeInterval = 2;
         private double x0, y0, angle, v0, acceleration;
         private static Graphics graphics;
@@ -14,6 +21,7 @@ namespace TrajectorySimulator
         public EnteringDataForm()
         {
             InitializeComponent();
+            AllocConsole();
             WarningForAllData.Visible = false;
             WarningForX.Visible = false;
             WarningForY.Visible = false;
@@ -78,6 +86,19 @@ namespace TrajectorySimulator
             }
         }
 
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            if (!IsDataEntered() || !AreTextBoxesFilled())
+            {
+                WarningForAllData.Visible = true;
+            }
+            else
+            {
+                WarningForAllData.Visible = false;
+                SaveTrajectoryWithAxes();
+            }
+        }
+
         private void EnteringDataForm_Paint(object sender, PaintEventArgs e)
         {
             graphics = e.Graphics;
@@ -88,6 +109,17 @@ namespace TrajectorySimulator
             graphics = CreateGraphics();
             GraphicsHelper.DrawTrajectory(graphics, x0, y0, angle, v0, acceleration, trajectoryColor);
         }
+
+        private void SaveTrajectoryWithAxes()
+        {
+            graphics = CreateGraphics();
+            string fileName = "trajectory_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "trajectory_images", fileName);
+            ImageGraphicsHelper.DrawTrajectoryAndSaveToFile(x0, y0, angle, v0, acceleration, trajectoryColor, path);
+            Console.WriteLine("File with trajectory and coordinate axes saved to:" + path);
+        }
+
+        
 
         private void DrawCoordinateAxesButton_Click(object sender, EventArgs e)
         {
@@ -176,6 +208,79 @@ namespace TrajectorySimulator
         }
     }
 
+    public static class ImageGraphicsHelper
+    {
+        public static void DrawTrajectoryAndSaveToFile(double x0, double y0, double angle, double v0, double acceleration, Color trajectoryColor, string filePath)
+        {
+            const double TimeInterval = 2;
+            const int InitialXOffset = 600;
+            const int InitialYOffset = 10;
+            const int AxesXSize = 500;
+            const int AxesYSize = 500;
+
+            Bitmap bitmap = new Bitmap(InitialXOffset + AxesXSize, InitialYOffset + AxesYSize);
+            using (Graphics graphics = Graphics.FromImage(bitmap))
+            {
+                DrawCoordinateAxes(graphics);
+
+                Pen pen = new Pen(trajectoryColor, 2);
+                double alpha = (360 - angle) * Math.PI / 180;
+                double time = 0;
+                double x = x0 + InitialXOffset + AxesXSize / 2;
+                double y = -y0 + InitialYOffset + AxesYSize / 2;
+                double startX = x;
+                double startY = y;
+
+                while (x >= InitialXOffset && x <= InitialXOffset + AxesXSize && y >= InitialYOffset && y <= InitialYOffset + AxesYSize)
+                {
+                    x = startX + v0 * time * Math.Cos(alpha) + 0.5 * acceleration * time * time * Math.Cos(alpha);
+                    y = startY + v0 * time * Math.Sin(alpha) + 0.5 * acceleration * time * time * Math.Sin(alpha);
+                    graphics.FillEllipse(pen.Brush, (float)x, (float)y, 6, 6);
+                    time += TimeInterval;
+                }
+
+                bitmap.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
+            }
+        }
+
+        public static void DrawCoordinateAxes(Graphics graphics)
+        {
+            const int InitialXOffset = 600;
+            const int InitialYOffset = 10;
+            const int AxesXSize = 500;
+            const int AxesYSize = 500;
+
+            Font font = new Font("Arial", 10);
+            Brush brush = Brushes.Black;
+            graphics.DrawString("0", font, brush, InitialXOffset + (AxesXSize / 2) + 5, InitialYOffset + (AxesYSize / 2) + 5);
+
+            Pen gridPen = new Pen(Color.LightGray, 1f);
+            Pen basicPen = new Pen(Color.Black, 3f);
+
+            for (int x = InitialXOffset; x <= InitialXOffset + AxesXSize; x += 50)
+                graphics.DrawLine(gridPen, x, InitialYOffset, x, InitialYOffset + AxesYSize);
+
+            for (int y = InitialYOffset; y <= InitialYOffset + AxesYSize; y += 50)
+                graphics.DrawLine(gridPen, InitialXOffset, y, InitialXOffset + AxesXSize, y);
+
+            graphics.DrawLine(basicPen, InitialXOffset, InitialYOffset + AxesYSize / 2, InitialXOffset + AxesXSize, InitialYOffset + AxesYSize / 2);
+            graphics.DrawLine(basicPen, InitialXOffset + AxesXSize / 2, InitialYOffset, InitialXOffset + AxesXSize / 2, InitialYOffset + AxesYSize);
+
+            for (int x = InitialXOffset, i = -AxesXSize / 2; x <= InitialXOffset + AxesXSize - 1; x += 50, i += 50)
+            {
+                graphics.DrawLine(basicPen, x, InitialYOffset + AxesYSize / 2 - 7, x, InitialYOffset + AxesYSize / 2 + 7);
+                if (i != 0) graphics.DrawString(i.ToString(), font, brush, x - 10, InitialYOffset + AxesYSize / 2 + 8);
+            }
+
+            for (int y = InitialYOffset + AxesYSize, i = -AxesYSize / 2; y > InitialYOffset; y -= 50, i += 50)
+            {
+                graphics.DrawLine(basicPen, InitialXOffset + AxesXSize / 2 - 7, y, InitialXOffset + AxesXSize / 2 + 7, y);
+                if (i != 0) graphics.DrawString(i.ToString(), font, brush, InitialXOffset + AxesXSize / 2 + 5, y);
+            }
+        }
+    }
+
+
     public static class InputValidator
     {
         public static void ValidateInput(TextBox textBox, ref double value, Label warningLabel, double? minValue = null, double? maxValue = null)
@@ -210,6 +315,4 @@ namespace TrajectorySimulator
             }
         }
     }
-
-   
 }

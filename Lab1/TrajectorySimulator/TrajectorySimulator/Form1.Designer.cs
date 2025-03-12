@@ -53,6 +53,7 @@
             VLabelInfo2 = new Label();
             ALabelInfo2 = new Label();
             DrawCoordinateAxesButton = new Button();
+            Save = new Button();
             ((System.ComponentModel.ISupportInitialize)CoordinateAxesExamplePictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -211,7 +212,7 @@
             // DrawTrajectoryButton
             // 
             DrawTrajectoryButton.BackColor = Color.FromArgb(255, 192, 192);
-            DrawTrajectoryButton.Location = new Point(414, 378);
+            DrawTrajectoryButton.Location = new Point(409, 331);
             DrawTrajectoryButton.Name = "DrawTrajectoryButton";
             DrawTrajectoryButton.Size = new Size(170, 29);
             DrawTrajectoryButton.TabIndex = 17;
@@ -234,7 +235,7 @@
             // 
             WarningForAllData.AutoSize = true;
             WarningForAllData.ForeColor = Color.Red;
-            WarningForAllData.Location = new Point(414, 410);
+            WarningForAllData.Location = new Point(408, 363);
             WarningForAllData.Name = "WarningForAllData";
             WarningForAllData.Size = new Size(171, 20);
             WarningForAllData.TabIndex = 19;
@@ -244,7 +245,7 @@
             // 
             SelectColorButton.BackColor = Color.FromArgb(255, 192, 255);
             SelectColorButton.ForeColor = SystemColors.ActiveCaptionText;
-            SelectColorButton.Location = new Point(409, 483);
+            SelectColorButton.Location = new Point(408, 483);
             SelectColorButton.Name = "SelectColorButton";
             SelectColorButton.Size = new Size(175, 79);
             SelectColorButton.TabIndex = 20;
@@ -283,7 +284,7 @@
             // DrawCoordinateAxesButton
             // 
             DrawCoordinateAxesButton.BackColor = Color.FromArgb(255, 192, 192);
-            DrawCoordinateAxesButton.Location = new Point(415, 316);
+            DrawCoordinateAxesButton.Location = new Point(409, 275);
             DrawCoordinateAxesButton.Name = "DrawCoordinateAxesButton";
             DrawCoordinateAxesButton.Size = new Size(170, 29);
             DrawCoordinateAxesButton.TabIndex = 24;
@@ -291,12 +292,24 @@
             DrawCoordinateAxesButton.UseVisualStyleBackColor = false;
             DrawCoordinateAxesButton.Click += DrawCoordinateAxesButton_Click;
             // 
+            // Save
+            // 
+            Save.BackColor = Color.FromArgb(255, 192, 192);
+            Save.Location = new Point(408, 387);
+            Save.Name = "Save";
+            Save.Size = new Size(170, 29);
+            Save.TabIndex = 25;
+            Save.Text = "Save File";
+            Save.UseVisualStyleBackColor = false;
+            Save.Click += SaveButton_Click;
+            // 
             // EnteringDataForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(1235, 567);
+            Controls.Add(Save);
             Controls.Add(DrawCoordinateAxesButton);
             Controls.Add(ALabelInfo2);
             Controls.Add(VLabelInfo2);
@@ -356,5 +369,6 @@
         private Label VLabelInfo2;
         private Label ALabelInfo2;
         private Button DrawCoordinateAxesButton;
+        private Button Save;
     }
 }
