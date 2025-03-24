@@ -96,7 +96,7 @@
             // ATextBox
             // 
             ATextBox.BackColor = Color.FromArgb(255, 192, 255);
-            ATextBox.Location = new Point(134, 453);
+            ATextBox.Location = new Point(134, 448);
             ATextBox.Name = "ATextBox";
             ATextBox.Size = new Size(233, 27);
             ATextBox.TabIndex = 5;
@@ -107,18 +107,18 @@
             xLabelInfo.AutoSize = true;
             xLabelInfo.Location = new Point(56, 101);
             xLabelInfo.Name = "xLabelInfo";
-            xLabelInfo.Size = new Size(72, 20);
+            xLabelInfo.Size = new Size(79, 20);
             xLabelInfo.TabIndex = 6;
-            xLabelInfo.Text = "x0(pixels)";
+            xLabelInfo.Text = "x0(meters)";
             // 
             // YLabelInfo
             // 
             YLabelInfo.AutoSize = true;
             YLabelInfo.Location = new Point(56, 191);
             YLabelInfo.Name = "YLabelInfo";
-            YLabelInfo.Size = new Size(72, 20);
+            YLabelInfo.Size = new Size(79, 20);
             YLabelInfo.TabIndex = 7;
-            YLabelInfo.Text = "y0(pixels)";
+            YLabelInfo.Text = "y0(meters)";
             // 
             // AngleLabelInfo
             // 
@@ -191,7 +191,7 @@
             // 
             WarningForA.AutoSize = true;
             WarningForA.ForeColor = Color.Red;
-            WarningForA.Location = new Point(134, 483);
+            WarningForA.Location = new Point(135, 483);
             WarningForA.Name = "WarningForA";
             WarningForA.Size = new Size(95, 20);
             WarningForA.TabIndex = 15;
@@ -268,18 +268,18 @@
             VLabelInfo2.AutoSize = true;
             VLabelInfo2.Location = new Point(18, 387);
             VLabelInfo2.Name = "VLabelInfo2";
-            VLabelInfo2.Size = new Size(110, 20);
+            VLabelInfo2.Size = new Size(117, 20);
             VLabelInfo2.TabIndex = 22;
-            VLabelInfo2.Text = "(pixels/second)";
+            VLabelInfo2.Text = "(meters/second)";
             // 
             // ALabelInfo2
             // 
             ALabelInfo2.AutoSize = true;
-            ALabelInfo2.Location = new Point(1, 476);
+            ALabelInfo2.Location = new Point(-3, 476);
             ALabelInfo2.Name = "ALabelInfo2";
-            ALabelInfo2.Size = new Size(134, 20);
+            ALabelInfo2.Size = new Size(141, 20);
             ALabelInfo2.TabIndex = 23;
-            ALabelInfo2.Text = "(pixels/seconds^2)";
+            ALabelInfo2.Text = "(meters/seconds^2)";
             // 
             // DrawCoordinateAxesButton
             // 

@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Dima\\Desktop\\Studying\\MethodsOFPE-Labs\\Lab1\\TrajectorySimulator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48E1F09F-4593-4DA7-87E2-4EA7DB28D352}|TrajectorySimulator\\TrajectorySimulator.csproj|C:\\Users\\Dima\\Desktop\\Studying\\MethodsOFPE-Labs\\Lab1\\TrajectorySimulator\\trajectorysimulator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{48E1F09F-4593-4DA7-87E2-4EA7DB28D352}|TrajectorySimulator\\TrajectorySimulator.csproj|c:\\users\\dima\\desktop\\studying\\methodsofpe-labs\\lab1\\trajectorysimulator\\trajectorysimulator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{48E1F09F-4593-4DA7-87E2-4EA7DB28D352}|TrajectorySimulator\\TrajectorySimulator.csproj|solutionrelative:trajectorysimulator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "TrajectorySimulator\\Form1.cs",
               "ToolTip": "C:\\Users\\Dima\\Desktop\\Studying\\MethodsOFPE-Labs\\Lab1\\TrajectorySimulator\\TrajectorySimulator\\Form1.cs",
               "RelativeToolTip": "TrajectorySimulator\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-02T18:22:41.177Z",
               "IsPinned": true,
@@ -46,7 +46,7 @@
               "RelativeDocumentMoniker": "TrajectorySimulator\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Dima\\Desktop\\Studying\\MethodsOFPE-Labs\\Lab1\\TrajectorySimulator\\TrajectorySimulator\\Form1.Designer.cs",
               "RelativeToolTip": "TrajectorySimulator\\Form1.Designer.cs",
-              "ViewState": "AgIAAG0BAAAAAAAAAAAQwBYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T13:02:36.715Z",
               "EditorCaption": ""
