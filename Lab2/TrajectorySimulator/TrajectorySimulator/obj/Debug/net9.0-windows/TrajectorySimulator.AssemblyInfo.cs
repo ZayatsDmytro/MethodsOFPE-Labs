@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrajectorySimulator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dfdccc21ed97251e09e300b0b2eb04d56a76326")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca884891c8bf72c1945592fc53ad96113771f9f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrajectorySimulator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrajectorySimulator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -32,17 +32,14 @@
             AngleTextBox = new TextBox();
             XTextBox = new TextBox();
             YTextBox = new TextBox();
-            ATextBox = new TextBox();
             xLabelInfo = new Label();
             YLabelInfo = new Label();
             AngleLabelInfo = new Label();
             VLabelInfo1 = new Label();
-            ALabelInfo1 = new Label();
             WarningForX = new Label();
             WarningForY = new Label();
             WarningForAngle = new Label();
             WarningForV = new Label();
-            WarningForA = new Label();
             CoordinateAxesExamplePictureBox = new PictureBox();
             DrawTrajectoryButton = new Button();
             ClearTrajectoryButton = new Button();
@@ -51,9 +48,15 @@
             SelectColorButton = new Button();
             HeaderLabel = new Label();
             VLabelInfo2 = new Label();
-            ALabelInfo2 = new Label();
             DrawCoordinateAxesButton = new Button();
             Save = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            TimeValueLabel = new Label();
+            DistanceValueLabel = new Label();
+            HeightValueLabel = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)CoordinateAxesExamplePictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -93,15 +96,6 @@
             YTextBox.TabIndex = 4;
             YTextBox.TextChanged += YTextBox_TextChanged;
             // 
-            // ATextBox
-            // 
-            ATextBox.BackColor = Color.FromArgb(255, 192, 255);
-            ATextBox.Location = new Point(134, 448);
-            ATextBox.Name = "ATextBox";
-            ATextBox.Size = new Size(233, 27);
-            ATextBox.TabIndex = 5;
-            ATextBox.TextChanged += ATextBox_TextChanged;
-            // 
             // xLabelInfo
             // 
             xLabelInfo.AutoSize = true;
@@ -137,15 +131,6 @@
             VLabelInfo1.Size = new Size(106, 20);
             VLabelInfo1.TabIndex = 9;
             VLabelInfo1.Text = "InnitialVelocity";
-            // 
-            // ALabelInfo1
-            // 
-            ALabelInfo1.AutoSize = true;
-            ALabelInfo1.Location = new Point(1, 456);
-            ALabelInfo1.Name = "ALabelInfo1";
-            ALabelInfo1.Size = new Size(92, 20);
-            ALabelInfo1.TabIndex = 10;
-            ALabelInfo1.Text = "Accelaration";
             // 
             // WarningForX
             // 
@@ -187,21 +172,11 @@
             WarningForV.TabIndex = 14;
             WarningForV.Text = "WarningForV";
             // 
-            // WarningForA
-            // 
-            WarningForA.AutoSize = true;
-            WarningForA.ForeColor = Color.Red;
-            WarningForA.Location = new Point(135, 483);
-            WarningForA.Name = "WarningForA";
-            WarningForA.Size = new Size(95, 20);
-            WarningForA.TabIndex = 15;
-            WarningForA.Text = "WarningForA";
-            // 
             // CoordinateAxesExamplePictureBox
             // 
             CoordinateAxesExamplePictureBox.BackColor = Color.Transparent;
             CoordinateAxesExamplePictureBox.Image = Properties.Resources.images;
-            CoordinateAxesExamplePictureBox.Location = new Point(730, 54);
+            CoordinateAxesExamplePictureBox.Location = new Point(739, 46);
             CoordinateAxesExamplePictureBox.Name = "CoordinateAxesExamplePictureBox";
             CoordinateAxesExamplePictureBox.Size = new Size(476, 408);
             CoordinateAxesExamplePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -212,7 +187,7 @@
             // DrawTrajectoryButton
             // 
             DrawTrajectoryButton.BackColor = Color.FromArgb(255, 192, 192);
-            DrawTrajectoryButton.Location = new Point(409, 331);
+            DrawTrajectoryButton.Location = new Point(409, 281);
             DrawTrajectoryButton.Name = "DrawTrajectoryButton";
             DrawTrajectoryButton.Size = new Size(170, 29);
             DrawTrajectoryButton.TabIndex = 17;
@@ -223,7 +198,7 @@
             // ClearTrajectoryButton
             // 
             ClearTrajectoryButton.BackColor = Color.FromArgb(255, 192, 192);
-            ClearTrajectoryButton.Location = new Point(414, 447);
+            ClearTrajectoryButton.Location = new Point(414, 383);
             ClearTrajectoryButton.Name = "ClearTrajectoryButton";
             ClearTrajectoryButton.Size = new Size(170, 29);
             ClearTrajectoryButton.TabIndex = 18;
@@ -235,7 +210,7 @@
             // 
             WarningForAllData.AutoSize = true;
             WarningForAllData.ForeColor = Color.Red;
-            WarningForAllData.Location = new Point(408, 363);
+            WarningForAllData.Location = new Point(408, 313);
             WarningForAllData.Name = "WarningForAllData";
             WarningForAllData.Size = new Size(171, 20);
             WarningForAllData.TabIndex = 19;
@@ -245,7 +220,7 @@
             // 
             SelectColorButton.BackColor = Color.FromArgb(255, 192, 255);
             SelectColorButton.ForeColor = SystemColors.ActiveCaptionText;
-            SelectColorButton.Location = new Point(408, 483);
+            SelectColorButton.Location = new Point(414, 483);
             SelectColorButton.Name = "SelectColorButton";
             SelectColorButton.Size = new Size(175, 79);
             SelectColorButton.TabIndex = 20;
@@ -272,19 +247,10 @@
             VLabelInfo2.TabIndex = 22;
             VLabelInfo2.Text = "(meters/second)";
             // 
-            // ALabelInfo2
-            // 
-            ALabelInfo2.AutoSize = true;
-            ALabelInfo2.Location = new Point(-3, 476);
-            ALabelInfo2.Name = "ALabelInfo2";
-            ALabelInfo2.Size = new Size(141, 20);
-            ALabelInfo2.TabIndex = 23;
-            ALabelInfo2.Text = "(meters/seconds^2)";
-            // 
             // DrawCoordinateAxesButton
             // 
             DrawCoordinateAxesButton.BackColor = Color.FromArgb(255, 192, 192);
-            DrawCoordinateAxesButton.Location = new Point(409, 275);
+            DrawCoordinateAxesButton.Location = new Point(409, 225);
             DrawCoordinateAxesButton.Name = "DrawCoordinateAxesButton";
             DrawCoordinateAxesButton.Size = new Size(170, 29);
             DrawCoordinateAxesButton.TabIndex = 24;
@@ -295,7 +261,7 @@
             // Save
             // 
             Save.BackColor = Color.FromArgb(255, 192, 192);
-            Save.Location = new Point(408, 387);
+            Save.Location = new Point(408, 337);
             Save.Name = "Save";
             Save.Size = new Size(170, 29);
             Save.TabIndex = 25;
@@ -303,15 +269,92 @@
             Save.UseVisualStyleBackColor = false;
             Save.Click += SaveButton_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(8, 483);
+            label1.Name = "label1";
+            label1.Size = new Size(135, 20);
+            label1.TabIndex = 26;
+            label1.Text = "Body flight range:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(8, 517);
+            label2.Name = "label2";
+            label2.Size = new Size(133, 20);
+            label2.TabIndex = 27;
+            label2.Text = "Maximum height:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(9, 453);
+            label3.Name = "label3";
+            label3.Size = new Size(89, 20);
+            label3.TabIndex = 28;
+            label3.Text = "Flight time:";
+            // 
+            // TimeValueLabel
+            // 
+            TimeValueLabel.AutoSize = true;
+            TimeValueLabel.Location = new Point(93, 453);
+            TimeValueLabel.Name = "TimeValueLabel";
+            TimeValueLabel.Size = new Size(114, 20);
+            TimeValueLabel.TabIndex = 29;
+            TimeValueLabel.Text = "TimeValueLabel";
+            TimeValueLabel.Visible = false;
+            // 
+            // DistanceValueLabel
+            // 
+            DistanceValueLabel.AutoSize = true;
+            DistanceValueLabel.Location = new Point(149, 483);
+            DistanceValueLabel.Name = "DistanceValueLabel";
+            DistanceValueLabel.Size = new Size(138, 20);
+            DistanceValueLabel.TabIndex = 30;
+            DistanceValueLabel.Text = "DistanceValueLabel";
+            DistanceValueLabel.Visible = false;
+            // 
+            // HeightValueLabel
+            // 
+            HeightValueLabel.AutoSize = true;
+            HeightValueLabel.Location = new Point(135, 517);
+            HeightValueLabel.Name = "HeightValueLabel";
+            HeightValueLabel.Size = new Size(126, 20);
+            HeightValueLabel.TabIndex = 31;
+            HeightValueLabel.Text = "HeightValueLabel";
+            HeightValueLabel.Visible = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(255, 192, 192);
+            button1.Location = new Point(414, 432);
+            button1.Name = "button1";
+            button1.Size = new Size(170, 29);
+            button1.TabIndex = 32;
+            button1.Text = "Show flight info";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += ShowFlightInfoButton_Click;
+            // 
             // EnteringDataForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(1235, 567);
+            Controls.Add(button1);
+            Controls.Add(HeightValueLabel);
+            Controls.Add(DistanceValueLabel);
+            Controls.Add(TimeValueLabel);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(Save);
             Controls.Add(DrawCoordinateAxesButton);
-            Controls.Add(ALabelInfo2);
             Controls.Add(VLabelInfo2);
             Controls.Add(HeaderLabel);
             Controls.Add(SelectColorButton);
@@ -319,23 +362,21 @@
             Controls.Add(ClearTrajectoryButton);
             Controls.Add(DrawTrajectoryButton);
             Controls.Add(CoordinateAxesExamplePictureBox);
-            Controls.Add(WarningForA);
             Controls.Add(WarningForV);
             Controls.Add(WarningForAngle);
             Controls.Add(WarningForY);
             Controls.Add(WarningForX);
-            Controls.Add(ALabelInfo1);
             Controls.Add(VLabelInfo1);
             Controls.Add(AngleLabelInfo);
             Controls.Add(YLabelInfo);
             Controls.Add(xLabelInfo);
-            Controls.Add(ATextBox);
             Controls.Add(YTextBox);
             Controls.Add(XTextBox);
             Controls.Add(AngleTextBox);
             Controls.Add(VTextBox);
             Name = "EnteringDataForm";
             Text = "git";
+            Load += EnteringDataForm_Load;
             Paint += EnteringDataForm_Paint;
             ((System.ComponentModel.ISupportInitialize)CoordinateAxesExamplePictureBox).EndInit();
             ResumeLayout(false);
@@ -348,17 +389,14 @@
         private TextBox AngleTextBox;
         private TextBox XTextBox;
         private TextBox YTextBox;
-        private TextBox ATextBox;
         private Label xLabelInfo;
         private Label YLabelInfo;
         private Label AngleLabelInfo;
         private Label VLabelInfo1;
-        private Label ALabelInfo1;
         private Label WarningForX;
         private Label WarningForY;
         private Label WarningForAngle;
         private Label WarningForV;
-        private Label WarningForA;
         private PictureBox CoordinateAxesExamplePictureBox;
         private Button DrawTrajectoryButton;
         private Button ClearTrajectoryButton;
@@ -367,8 +405,14 @@
         private Button SelectColorButton;
         private Label HeaderLabel;
         private Label VLabelInfo2;
-        private Label ALabelInfo2;
         private Button DrawCoordinateAxesButton;
         private Button Save;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label TimeValueLabel;
+        private Label DistanceValueLabel;
+        private Label HeightValueLabel;
+        private Button button1;
     }
 }
