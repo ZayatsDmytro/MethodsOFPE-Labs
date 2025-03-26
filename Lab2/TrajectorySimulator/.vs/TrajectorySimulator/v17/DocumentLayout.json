@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "TrajectorySimulator\\Form1.cs",
               "ToolTip": "C:\\Users\\Dima\\Desktop\\Studying\\MethodsOFPE-Labs\\Lab2\\TrajectorySimulator\\TrajectorySimulator\\Form1.cs",
               "RelativeToolTip": "TrajectorySimulator\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-02T18:22:41.177Z",
               "IsPinned": true,
@@ -48,7 +48,8 @@
               "RelativeToolTip": "TrajectorySimulator\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T13:02:36.715Z"
+              "WhenOpened": "2025-03-05T13:02:36.715Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,10 +57,11 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dima\\Desktop\\Studying\\MethodsOFPE-Labs\\Lab2\\TrajectorySimulator\\TrajectorySimulator\\Form1.cs",
               "RelativeDocumentMoniker": "TrajectorySimulator\\Form1.cs",
-              "ToolTip": "C:\\Users\\Dima\\Desktop\\Studying\\MethodsOFPE-Labs\\Lab1\\TrajectorySimulator\\TrajectorySimulator\\Form1.cs [Design]*",
-              "RelativeToolTip": "..\\..\\Lab1\\TrajectorySimulator\\TrajectorySimulator\\Form1.cs [Design]*",
+              "ToolTip": "C:\\Users\\Dima\\Desktop\\Studying\\MethodsOFPE-Labs\\Lab2\\TrajectorySimulator\\TrajectorySimulator\\Form1.cs [Design]",
+              "RelativeToolTip": "TrajectorySimulator\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T12:30:10.079Z"
+              "WhenOpened": "2025-03-05T12:30:10.079Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
